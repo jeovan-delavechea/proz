@@ -1,0 +1,64 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--cor-da-navbar);
+    margin-bottom: 30px;
+}
+
+.navbar .menu-lista{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu-lista li a{
+    font-weight: 100;
+    color: var(--cor-da-letra-do-menu);
+}
+
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.principal section .chamada{
+    margin-bottom: 3rem;
+}
+
+.principal section .chamada .titulo-principal{
+    font-size: var(--tamanho-do-titulo);
+}
+
+.principal section .cartoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.principal section .cartoes .cartao{
+    background-color: var(--cor-dos-cards);
+    width: 38rem;
+    height: 26rem;
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media(max-width: 920px){
+    .principal section .cartoes .cartao{
+        width: 30rem;
+    }
+}
+
+@media(max-width: 630px){
+    .principal section .cartoes{
+        flex-direction: column;
+    }
+}

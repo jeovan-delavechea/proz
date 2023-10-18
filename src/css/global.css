@@ -1,0 +1,13 @@
+:root{
+    --cor-da-navbar: lightgray;
+    --cor-da-letra-do-menu: #593493;
+    --cor-da-tela-principal: rgb(94, 71, 148);
+    --cor-dos-cards: rgb(241, 119, 4);
+    --branco: #ffffff;
+    --tamanho-do-titulo: 60px;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--cor-da-tela-principal);
+}

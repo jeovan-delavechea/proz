@@ -1,0 +1,113 @@
+.navbar nav .menu-lista{
+    display: flex;
+}
+
+.navbar nav .menu-lista li a{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.2s all ease-in-out;
+}
+
+.navbar nav .menu-lista li a:hover{
+    color: var(--cor-da-navbar);
+    background-color: var(--cor-da-tela-principal);
+}
+
+/* responsive */
+
+.navbar .menu{
+    display: none;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+}
+
+.navbar nav label{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar .hamburguer{
+    background-color: var(--cor-da-letra-do-menu);
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 22px;
+    left: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar .hamburguer:before, .navbar .hamburguer:after{
+    background-color: var(--cor-da-letra-do-menu);
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar .hamburguer:before{
+    top: -10px;
+}
+
+.navbar .hamburguer:after{
+    bottom: -10px;
+}
+
+.navbar input{
+    display: none;
+}
+
+.navbar input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.navbar input:checked ~ label .hamburguer:before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.navbar input:checked ~ label .hamburguer:after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+@media(max-width: 900px){
+    .navbar .menu{
+        display: block;
+    }
+
+    .navbar nav .menu-lista{
+        display: none;
+    }
+
+    .navbar input:checked ~ ul{
+        display: block;
+    }
+
+    .navbar nav{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        z-index: 1;
+    }
+
+    .navbar nav .menu-lista{
+        width: 200px;
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        opacity: 0.8;
+    }
+
+    .navbar nav .menu-lista a{
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+}
